@@ -17,8 +17,8 @@ import os
 process_latent = T.Compose([
     T.Resize(
         size=224, 
-        interpolation=InterpolationMode.BICUBIC,  # 官方用双三次插值
-        antialias=True  # 抗锯齿（PyTorch 1.10+支持）
+        interpolation=InterpolationMode.BICUBIC,  
+        antialias=True 
     ),
     T.CenterCrop(224),
     T.ConvertImageDtype(torch.float),
@@ -184,7 +184,7 @@ def patch_compute(
 ):
     max_patch = 5
     B, C, H, W = latents_n.shape
-    assert H % max_patch == 0 and W % max_patch == 0, "H, W 必须能被 max_patch 整除"
+    assert H % max_patch == 0 and W % max_patch == 0, 
 
     h_splits = H // max_patch
     w_splits = W // max_patch
