@@ -1,7 +1,7 @@
 #!/bin/bash
 export CUDA_VISIBLE_DEVICES=[GPUS]
 
-python UAE/run_protection.py --res 512 \
+python run_protection.py --res 512 \
  --SD_name "stabilityai/stable-diffusion-2-base" \
  --scale 0.0 \
  --images_root /path/to/images_root \ 
