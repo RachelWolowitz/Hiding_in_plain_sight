@@ -5,8 +5,6 @@ import os
 import random
 import argparse
 import re
-sys.path.append(".")
-sys.path.append("..")
 from protection import  ddim_sample_adv_momentum
 import torch
 from diffusers import DDIMScheduler, StableDiffusionPipeline
