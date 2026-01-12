@@ -30,7 +30,7 @@ parser.add_argument('--a', type=float, default=0.5,help='adversarial weight for 
 parser.add_argument('--eta', type=float, default=0.0)
 parser.add_argument('--LAMBDA_EDGE', type=float, default=0.0)
 parser.add_argument('--beta', type=float, default=0.5,help='momentum decay factor')
-parser.add_argument('--save_dir', type=str, default='/home/mlsnrs/data/wyn/NAS/GEO/out/adv_image/')
+parser.add_argument('--save_dir', type=str, default='/path/to/save')
 args = parser.parse_args()
 
 def main():
