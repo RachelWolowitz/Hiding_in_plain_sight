@@ -10,18 +10,19 @@ Multimodal large reasoning models (MLRMs) have demonstrated remarkable capabilit
 However, this very power introduces a critical yet underexplored privacy threat: adversaries can exploit MLRMs to precisely infer users' geographic locations from casually shared photographs, by performing structured reasoning over subtle visual cues such as architectural styles, vegetation, and lighting conditions.
 This capability exposes sensitive personal information including home addresses and daily routines, enabling severe real-world harms including stalking, surveillance, and targeted harassment.
 
-In this work, we present a systematic study of MLRM-driven \textit{geolocation privacy leakage}.
+In this work, we present a systematic study of MLRM-driven *geolocation privacy leakage*.
 We first reveal that refusal-based safeguards are critically insufficient, as carefully crafted jailbreak prompts can raise model response rates to 100\%. 
 We further identify that existing defenses, which inject imperceptible perturbations into shared images, suffer from structural limitations intrinsic to their pixel-space optimization, resulting in degraded black-box transferability and pronounced visual artifacts.
 
-Motivated by these findings, we propose a diffusion-based framework for geolocation privacy protection that addresses these failure modes at root.
-By injecting perturbations into the \textit{latent space} of a diffusion model during reverse sampling, our method operates directly on high-level semantic representations, improving the effectiveness-utility trade-off by construction.
-We further anchor the optimization with GeoCLIP, a model explicitly aligned with GPS coordinates, to 
-target the geographic semantic signals that MLRMs exploit for location inference, achieving stronger black-box transferability without perceptible image degradation. 
-We additionally extend the framework with diffusion inpainting mechanisms for granular, user-configurable geographic disclosure, enabling selective modification of location cues at country or region granularity.
+Motivated by these findings, we propose a diffusion-based framework that provides targeted, proactive defense against geolocation privacy leakage.
+By injecting perturbations into the *latent space* of a diffusion model during reverse sampling, our method operates directly on high-level semantic representations, thereby resolving the effectiveness-utility bottlenecks by construction.
+We further ground our optimization with GeoCLIP, a model explicitly aligned with GPS coordinates, as a surrogate to pinpoint and disrupt the geographic signals that MLRMs exploit for location inference.
+This targeted semantic disruption yields significantly stronger black-box transferability while preserving perceptual image quality, offering a seamless integration on social media platforms.
+Additionally, we explore an optional extension of the framework with diffusion inpainting to suppress coarse-grained geolocation cues, enabling granular, user-configurable control over country- and regional-level privacy disclosure.
 
-Extensive experiments on five leading commercial MLRM APIs (e.g., GPT-5 and Claude Opus 4.5) validate the effectiveness of our framework, which substantially increases location prediction errors and reduces 1,km-level leakage accuracy to below 5\%.
+Extensive experiments on five leading commercial MLRM APIs (e.g., GPT-5 and Claude Opus 4.5) validate the effectiveness of our framework, which substantially increases location prediction errors and reduces 1km-level leakage accuracy to below 5\%.
 Our approach consistently outperforms baselines in protection efficacy and image utility, while demonstrating robustness against image transformation and purification attacks.
+
 
 ## Usage
 We provide the code files for diffusion-based perturbation, MLRM response generation, and evalation metrics in this repository. The main implementation is in `run_protection.py` and `protection.py`.
