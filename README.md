@@ -1,7 +1,7 @@
 # Hiding in Plain Sight: A Diffusion-based Mitigation of Geolocation Privacy Leakage in Vision–Language Models
 [![License: MIT](https://img.shields.io/badge/License-MIT-g.svg)](https://opensource.org/licenses/MIT)
 
-🎉 **NEWS:** Our paper has been accepted to **NDSS 2027** !
+**NEWS**: 🎉 Our paper has been accepted to **NDSS 2027**!
 
 **NOTE**: To prevent potetial harm, we release our source code only *upon request for research purposes*.
 
@@ -62,6 +62,7 @@ If you find this work useful, please cite:
   journal={arXiv preprint arXiv:2609.21363},
   year={2026}
 }
+```
 
 ## Acknowledgement
 This repo is based on the codebase of [Venom](https://github.com/huizhg/VENOM). We sincerely thank the contributors for their valuable work.
