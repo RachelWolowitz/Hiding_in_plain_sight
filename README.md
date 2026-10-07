@@ -1,7 +1,7 @@
 # Hiding in Plain Sight: A Diffusion-based Mitigation of Geolocation Privacy Leakage in Vision–Language Models
 [![License: MIT](https://img.shields.io/badge/License-MIT-g.svg)](https://opensource.org/licenses/MIT)
 
-🎉 **NEWS:** Our paper has been accepted to **NDSS 2027**!
+🎉 **NEWS:** Our paper has been accepted to **NDSS 2027** !
 
 **NOTE**: To prevent potetial harm, we release our source code only *upon request for research purposes*.
 
